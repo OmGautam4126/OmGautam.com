@@ -5,10 +5,10 @@ const urlsToCache = [
   'script.js',
   'manifest.json',
   'My Website.html',
+  'OneSignalSDKWorker.js',
   'icon-192.png',
   'icon-512.png'
 ];
-
 // 1️⃣ Install Event: Cache files
 self.addEventListener('install', event => {
   console.log('[Service Worker] Install');
