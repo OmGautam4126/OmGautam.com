@@ -38,14 +38,15 @@
   <footer>
     <p>© 2025 Om Gautam</p>
   </footer>
+<!-- OneSignal Web Push SDK -->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.log('✅ Service Worker registered:', reg.scope))
-        .catch(err => console.error('❌ Service Worker failed:', err));
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "YOUR-APP-ID", // Replace with your actual ID from OneSignal
     });
-  }
+  });
 </script>
 </body>
 </html>
